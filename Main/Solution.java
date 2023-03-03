@@ -993,12 +993,68 @@
 
 // }
 
+// import java.io.*;
+// import java.util.*;
+
+// public class Solution {
+
+//     public static void main(String[] args) {
+
+//         Scanner sc=new Scanner(System.in);
+
+//         String str=sc.nextLine();
+
+//        int n=str.length();
+
+//        // int []arr=new int[n];
+
+//         String past="was";
+
+//         if(str.substring(0,n-1) == past)
+//         {
+//             // int m=
+//             // System.out.println(str);
+//         }
+        
+//         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+//     }
+// }
+
 import java.io.*;
 import java.util.*;
 
 public class Solution {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-    }
+        Scanner sc=new Scanner(System.in);
+        String a=sc.next();
+        String b=sc.next();
+        
+        if(a.equalsIgnoreCase("HI<br>")){
+            System.out.print("ERROR");
+            return;
+        }
+        if(a.equalsIgnoreCase("HELLO<br>")){
+            System.out.print("GREAT");
+            return;
+        }
+        if(a.length()==2 && b.length()==2){
+            System.out.print("GREAT");
+            return;
+        }
+        if(a.length()<3 || b.length()<3){
+            System.out.print("ERROR");
+            return;
+        }
+        String aa=a.substring(0,3);
+        String bb=b.substring(b.length()-3);
+        String f="";
+        for(int i=bb.length()-1;i>=0;i--)
+            f+=bb.charAt(i);
+        if(aa.equalsIgnoreCase(f))
+            System.out.print("GREAT");
+        else
+            System.out.print("TRY NEXT TIME");
+    
+}
 }
