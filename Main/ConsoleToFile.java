@@ -21,5 +21,6 @@ public class ConsoleToFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
     }
 }
